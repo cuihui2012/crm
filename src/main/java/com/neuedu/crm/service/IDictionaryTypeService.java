@@ -6,7 +6,7 @@ import com.neuedu.crm.pojo.DictionaryType;
 import com.neuedu.crm.pojo.DictionaryTypeExample;
 /**
  * 
- * @author huangwanzong
+ * @author cuihui
  * 
  */
 
@@ -14,7 +14,7 @@ public interface IDictionaryTypeService {
     /**
      * 
      * 描述： 按照Example 统计记录总数
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.1
      * @param dictionaryTypeExample 查询条件
      * @return long 数据的数量
@@ -27,7 +27,7 @@ public interface IDictionaryTypeService {
     /**
      * 
      * 描述：按照Example 删除 DictionaryType
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param dictionaryTypeExample 
      * @return boolean 删除的结果
@@ -40,7 +40,7 @@ public interface IDictionaryTypeService {
     /**
      * 
      * 描述：按照主键id删除DictionaryTypeExample
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param id 数据字典 id
      * @return boolean 删除结果
@@ -53,7 +53,7 @@ public interface IDictionaryTypeService {
     /**
      * 
      * 描述：插入一条DictionaryType数据 如字段为空，则插入null
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param dictionaryType
      * @return boolean 插入结果
@@ -66,7 +66,7 @@ public interface IDictionaryTypeService {
     /**
      * 
      * 描述：插入一条DictionaryType数据，如字段为空，则插入数据库表字段的默认值
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param dictionaryType
      * @return boolean 插入结果
@@ -79,7 +79,7 @@ public interface IDictionaryTypeService {
     /**
      * 
      * 描述：按照Example条件 模糊查询
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param dictionaryTypeExample 查询条件
      * @return List<DictionaryType> 含DictionaryType的list
@@ -92,7 +92,7 @@ public interface IDictionaryTypeService {
     /**
      * 
      * 描述：按照DictionaryType 的id 查找 DictionaryType
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param id 要查询的id
      * @return DictionaryType 查到的数据或空值
@@ -105,7 +105,7 @@ public interface IDictionaryTypeService {
     /**
      * 
      * 描述：更新DictionaryType
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param dictionaryType 对象中若有空则更新字段为null
      * @param dictionaryTypeExample 为where条件
@@ -119,7 +119,7 @@ public interface IDictionaryTypeService {
     /**
      * 
      * 描述：更新DictionaryType 
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param dictionaryType 对象中若有空则不会更新此字段
      * @param dictionaryTypeExample 为where条件
@@ -133,7 +133,7 @@ public interface IDictionaryTypeService {
     /**
      * 
      * 描述：按照DictionaryType id 更新DictionaryType
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param dictionaryType 对象中如有空则不会更新此字段
      * @return boolean
@@ -146,7 +146,7 @@ public interface IDictionaryTypeService {
     /**
      * 
      * 描述：按照DictionaryType id 更新DictionaryType
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param dictionaryType 对象中如有空则更新此字段为null
      * @return boolean

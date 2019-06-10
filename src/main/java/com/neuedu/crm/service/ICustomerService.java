@@ -148,7 +148,7 @@ public interface ICustomerService {
 
 	/**
 	 * 描述：添加客户，同时设置主要联系人
-	 * @author HuangWanzong
+	 * @author cuihui
 	 * @date 2018/07/11
 	 * @version 1.0
 	 * @param customer

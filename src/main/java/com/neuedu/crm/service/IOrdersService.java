@@ -158,7 +158,7 @@ public interface IOrdersService {
 	
 	/**
 	 * 描述：按照客户id分组查询最后一个订单的时间
-	 * @author HuangWanzong
+	 * @author cuihui
 	 * @date 2018/07/24
 	 * @version 1.0
 	 * @return List<Orders>
@@ -169,7 +169,7 @@ public interface IOrdersService {
 	
 	/**
 	 * 描述：分页查询客户历史订单信息
-	 * @author HuangWanzong
+	 * @author cuihui
 	 * @date 2018/07/24
 	 * @version 1.0
 	 * @param ordersExample

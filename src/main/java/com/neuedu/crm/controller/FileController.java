@@ -19,7 +19,7 @@ import com.neuedu.crm.utils.Operation;
 
 /**
  * 
- * @author huangwanzong
+ * @author cuihui
  * @date 2018/07/12
  */
 
@@ -39,7 +39,7 @@ public class FileController {
      *      msg ： 返回的信息
      *      filename ： 当文件上传完成后，服务器保存的文件名
      *      
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param request
      * @param file 要上传的文件

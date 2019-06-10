@@ -36,7 +36,7 @@ layui.use(['table','flow'],function(){
 	     $.post('${pageContext.request.contextPath}/followup/list',{'page':page}, function(res){
 	       //假设你的列表返回在data集合中
 	       layui.each(res.data, function(index, item){
-	    	 var title = '' + item.time[0] + '年' + item.time[1] + '月' + item.time[2] + '日' + '   ' + item.time[3] + ':' +item.time[4] + ':' +item.time[5];
+	    	 var title = '' + item.time[0] + '年' + item.time[1] + '月' + item.time[2] + '日' + '   ' + ((item.time[3] == undefined || item.time[3] == 0)?'00':item.time[3]+'') + ':' +((item.time[4] == undefined || item.time[4] == 0)?'00':item.time[4]+'') + ':' +((item.time[5] == undefined || item.time[5] == 0)?'00':item.time[5]+'');
 	         //var title = Format(item.time,'yyyy-MM-dd HH:mm:ss');
 	    	 var str = '<li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe63f;</i>';
 	         str += '<div class="layui-timeline-content layui-text" >';

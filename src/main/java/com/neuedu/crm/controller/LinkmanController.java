@@ -19,7 +19,7 @@ import com.neuedu.crm.utils.Operation;
 
 /**
  * 
- * @author HuangWanzong
+ * @author cuihui
  * @date 2018年7月11日
  */
 @Controller
@@ -29,7 +29,7 @@ public class LinkmanController {
     private ILinkmanService linkmanService;
     
     /**
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018年7月11日
      */
     @RequiresPermissions("7003")
@@ -85,7 +85,7 @@ public class LinkmanController {
     }
     
     /**
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018年7月11日
      */
     @RequiresPermissions("7001")
@@ -127,7 +127,7 @@ public class LinkmanController {
     }
     
     /**
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018年7月11日
      */
     @RequiresPermissions("7002")
@@ -182,7 +182,7 @@ public class LinkmanController {
     }
     
     /**
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018年7月11日
      */
     @RequiresPermissions("7004")
@@ -211,7 +211,7 @@ public class LinkmanController {
     }
     
     /**
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018年7月11日
      */
     @RequiresPermissions("7005")
@@ -237,7 +237,7 @@ public class LinkmanController {
     
     
     /**
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018年7月11日
      */
     @RequiresPermissions("7006")

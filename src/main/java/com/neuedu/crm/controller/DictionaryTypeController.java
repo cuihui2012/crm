@@ -19,7 +19,7 @@ import com.neuedu.crm.service.IDictionaryTypeService;
 import com.neuedu.crm.utils.Operation;
 /**
  * 
- * @author HuangWanzong
+ * @author cuihui
  *
  */
 @Controller
@@ -35,7 +35,7 @@ public class DictionaryTypeController {
     /**
      * 
      * 描述：
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/07/04
      * @version 1.0
      * @param page 必填参数，查询第几页参数，默认值 1
@@ -81,7 +81,7 @@ public class DictionaryTypeController {
     }
     
     /**
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018年7月4日
      */
     @RequiresPermissions("20002")
@@ -103,7 +103,7 @@ public class DictionaryTypeController {
     }
     
     /**
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018年7月4日
      */
     @RequiresPermissions("20003")
@@ -126,7 +126,7 @@ public class DictionaryTypeController {
     }
     
     /**
-     * @author huangwanzong
+     * @author cuihui
      * @date 2018年7月4日
      */
     @RequiresPermissions("20004")
@@ -151,7 +151,7 @@ public class DictionaryTypeController {
     /**
      * 
      * 描述：用户通过名称或ID查找字典（ID优先级比名称高）
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/07/10
      * @version 1.0
      * @param id 可选参数，若存在则根据id查询字典

@@ -451,7 +451,7 @@ layui.use(['element','table','flow'],function(){
 	     $.post('${pageContext.request.contextPath}/followup/list',{'page':page,'customerId':parm.id}, function(res){
 	       //假设你的列表返回在data集合中
 	       layui.each(res.data, function(index, item){
-	    	 var title = '' + item.time[0] + '年' + item.time[1] + '月' + item.time[2] + '日' + '   ' + item.time[3] + ':' +item.time[4] + ':' +item.time[5];
+	    	 var title = '' + item.time[0] + '年' + item.time[1] + '月' + item.time[2] + '日' + '   ' + ((item.time[3] == undefined || item.time[3] == 0)?'00':item.time[3]+'') + ':' +((item.time[4] == undefined || item.time[4] == 0)?'00':item.time[4]+'') + ':' +((item.time[5] == undefined || item.time[5] == 0)?'00':item.time[5]+'');
 	         var str = '<li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe63f;</i>';
 	         str += '<div class="layui-timeline-content layui-text" >';
 	         str += '<h3 class="layui-timeline-title"  id="followup-' + item.id + '"> <span style="font-size: 16px;">' + item.manager.account + '</span> ';
@@ -514,7 +514,7 @@ layui.use(['element','table','flow'],function(){
          $.post('${pageContext.request.contextPath}/customer/transfer/list',{'page':page,'customerId':parm.id}, function(res){
            //假设你的列表返回在data集合中
            layui.each(res.data, function(index, item){
-             var title = '' + item.time[0] + '-' + item.time[1] + '-' + item.time[2] + '   ' + item.time[3] + ':' +item.time[4] + ':' +item.time[5];
+             var title = '' + item.time[0] + '-' + item.time[1] + '-' + item.time[2] + '   ' + ((item.time[3] == undefined || item.time[3] == 0)?'00':item.time[3]+'') + ':' +((item.time[4] == undefined || item.time[4] == 0)?'00':item.time[4]+'') + ':' +((item.time[5] == undefined || item.time[5] == 0)?'00':item.time[5]+'');
              var str = '<li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe63f;</i>';
              str += '<div class="layui-timeline-content layui-text">';
              str += '<h3 class="layui-timeline-title">' + title + '</h3>';
@@ -567,9 +567,9 @@ layui.use(['element','table','flow'],function(){
 			case 1: str = '' + time[0];break;
 			case 2: str = '' + time[0] + '-' + time[1];break;
 			case 3: str = '' + time[0] + '-' + time[1] + '-' + time[2];break;
-			case 4: str = '' + time[0] + '-' + time[1] + '-' + time[2] + '   ' + time[3];break;
-			case 5: str = '' + time[0] + '-' + time[1] + '-' + time[2] + '   ' + time[3] + ':' + time[4];break;
-			case 6: str = '' + time[0] + '-' + time[1] + '-' + time[2] + '   ' + time[3] + ':' + time[4] + ':' + time[5];break;
+            case 4: str = '' + time[0] + '-' + time[1] + '-' + time[2] + '   ' + ((time[3] == undefined || time[3] == 0)?'00':time[3]+'');break;
+            case 5: str = '' + time[0] + '-' + time[1] + '-' + time[2] + '   ' + ((time[3] == undefined || time[3] == 0)?'00':time[3]+'') + ':' +((time[4] == undefined || time[4] == 0)?'00':time[4]+'');break;
+            case 6: str = '' + time[0] + '-' + time[1] + '-' + time[2] + '   ' + ((time[3] == undefined || time[3] == 0)?'00':time[3]+'') + ':' +((time[4] == undefined || time[4] == 0)?'00':time[4]+'') + ':' +((time[5] == undefined ||time[5] == 0)?'00':time[5]+'');break;
 		}
 		return str;
 	}

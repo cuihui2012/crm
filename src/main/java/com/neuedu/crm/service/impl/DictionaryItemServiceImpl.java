@@ -12,7 +12,7 @@ import com.neuedu.crm.pojo.DictionaryItemExample;
 import com.neuedu.crm.service.IDictionaryItemService;
 /**
  * 
- * @author HuangWanzong
+ * @author cuihui
  *
  */
 @Service

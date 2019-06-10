@@ -29,7 +29,7 @@ import com.neuedu.crm.utils.Operation;
 
 /**
  * 
- * @author huangwanzong
+ * @author cuihui
  * @date 2018/7/14
  *
  */
@@ -55,7 +55,7 @@ public class CustomerTransferController {
     
     /**
      * 描述：查询客户的转移记录
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param page 可选参数，type不为all时生效，分页查询的页数
      * @param limit 可选参数，type不为all时生效，分页查询的分页大小
@@ -116,7 +116,7 @@ public class CustomerTransferController {
     /**
      * 
      * 描述：进行客户转移
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @param transfer 必填参数:customerId，NewmanagerId,reason
      * @return 

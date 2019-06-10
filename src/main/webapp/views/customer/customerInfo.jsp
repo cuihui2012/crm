@@ -242,9 +242,9 @@ layui.use(['table'],function(){
 			case 1: str = '' + time[0];break;
 			case 2: str = '' + time[0] + '-' + time[1];break;
 			case 3: str = '' + time[0] + '-' + time[1] + '-' + time[2];break;
-			case 4: str = '' + time[0] + '-' + time[1] + '-' + time[2] + '   ' + time[3];break;
-			case 5: str = '' + time[0] + '-' + time[1] + '-' + time[2] + '   ' + time[3] + ':' + time[4];break;
-			case 6: str = '' + time[0] + '-' + time[1] + '-' + time[2] + '   ' + time[3] + ':' + time[4] + ':' + time[5];break;
+			case 4: str = '' + time[0] + '-' + time[1] + '-' + time[2] + '   ' + ((time[3] == undefined || time[3] == 0)?'00':time[3]+'');break;
+			case 5: str = '' + time[0] + '-' + time[1] + '-' + time[2] + '   ' + ((time[3] == undefined || time[3] == 0)?'00':time[3]+'') + ':' +((time[4] == undefined || time[4] == 0)?'00':time[4]+'');break;
+			case 6: str = '' + time[0] + '-' + time[1] + '-' + time[2] + '   ' + ((time[3] == undefined || time[3] == 0)?'00':time[3]+'') + ':' +((time[4] == undefined || time[4] == 0)?'00':time[4]+'') + ':' +((time[5] == undefined ||time[5] == 0)?'00':time[5]+'');break;
 		}
 		return str;
 	}

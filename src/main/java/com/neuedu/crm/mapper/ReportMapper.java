@@ -45,7 +45,7 @@ public interface ReportMapper{
 	public List<Map<String, Object>> countCustomerDecrease(@Param("n")int n);
 	/**
 	 * 描述：查询某段时间内客户的新增客户
-	 * @author HuangWanzong
+	 * @author cuihui
 	 * @date 2018/07/24
 	 * @version 1.0
 	 * @param report
@@ -56,7 +56,7 @@ public interface ReportMapper{
 	public List<Map<String, Object>> countCustomerByDate(Report report);
 	/**
 	 * 描述：查询某段时间内客户的新增跟进记录
-	 * @author HuangWanzong
+	 * @author cuihui
 	 * @date 2018/07/24
 	 * @version 1.0
 	 * @param report
@@ -67,7 +67,7 @@ public interface ReportMapper{
 	public List<Map<String, Object>> countFollowupByDate(Report report);
 	/**
 	 * 描述：查询某段时间内客户的新增客户,按照某个客户信息某个字段分类
-	 * @author HuangWanzong
+	 * @author cuihui
 	 * @date 2018/07/24
 	 * @version 1.0
 	 * @param report

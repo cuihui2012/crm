@@ -17,7 +17,7 @@ import com.neuedu.crm.service.IDictionaryItemService;
 import com.neuedu.crm.utils.Operation;
 /**
  * 
- * @author HuangWanzong
+ * @author cuihui
  *
  */
 @Controller
@@ -31,7 +31,7 @@ public class DictionaryItemController {
     
     /**
      * 描述：查询字典子项
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/07/17
      * @version 1.0
      * @param page 可选参数
@@ -61,7 +61,7 @@ public class DictionaryItemController {
     
     /**
      * 描述:添加非锁定状态子项
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/7/17
      */
     @RequiresPermissions("20007")
@@ -87,7 +87,7 @@ public class DictionaryItemController {
     
     /**
      * 描述：更新非锁定状态子项
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/7/17
      */
     @RequiresPermissions("20008")
@@ -128,7 +128,7 @@ public class DictionaryItemController {
     
     /**
      * 描述：删除非锁定子项
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/7/17
      */
     @RequiresPermissions("20009")
@@ -170,7 +170,7 @@ public class DictionaryItemController {
     
     /**
      * 描述：添加子项
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/7/5
      */
     @RequiresPermissions("20010")
@@ -191,7 +191,7 @@ public class DictionaryItemController {
     }
     
     /**
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/7/5
      */
     @RequiresPermissions("20011")
@@ -213,7 +213,7 @@ public class DictionaryItemController {
     
     
     /**
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/7/5
      */
     @RequiresPermissions("20012")

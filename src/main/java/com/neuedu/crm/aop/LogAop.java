@@ -159,7 +159,7 @@ public class LogAop {
 
 	/**
 	 * 描述：@AfterThrowing(pointcut="log()", throwing="e")
-	 * @author huangwanzong
+	 * @author cuihui
 	 * @date 2018/07/24
 	 * @version 1.0
 	 * @param joinPoint

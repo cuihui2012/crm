@@ -4,7 +4,7 @@ package com.neuedu.crm.service;
 import com.neuedu.crm.pojo.User;
 
 /**
- * @author HuangWanzong
+ * @author cuihui
  * @date 2018/07/24
  */
 public interface ILoginService {

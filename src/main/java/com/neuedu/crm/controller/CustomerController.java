@@ -25,7 +25,7 @@ import com.neuedu.crm.utils.Operation;
 
 /**
  * 
- * @author huangwanzong
+ * @author cuihui
  * @date 2018年7月6日
  */
 @Controller
@@ -37,7 +37,7 @@ public class CustomerController {
     private User user = null;
 
     /**
-     * @author huangwanzong
+     * @author cuihui
      * @date 2018年7月6日
      */
     private User getUser(HttpServletRequest request) {
@@ -50,7 +50,7 @@ public class CustomerController {
     /**
      * 
      * 描述：分页查询客户
-     * @author huangwanzong
+     * @author cuihui
      * @date 2018/07/06
      * @version 1.0
      * @param page 可选参数，查询的页数，默认值 1
@@ -141,7 +141,7 @@ public class CustomerController {
     /**
      * 
      * 描述：添加一个客户
-     * @author huangwanzong
+     * @author cuihui
      * @date 2018/07/17
      * @version 1.0
      * @param customer 客户信息

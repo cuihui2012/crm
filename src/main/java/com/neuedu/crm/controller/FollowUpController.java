@@ -26,7 +26,7 @@ import com.neuedu.crm.utils.Operation;
 
 
 /**
- * @author HuangWanzong
+ * @author cuihui
  * @date 2018/07/12
  */
 @Operation(name="跟踪记录管理")
@@ -42,7 +42,7 @@ public class FollowUpController {
     
     /**
      *  分页查询跟踪记录
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/7/12/
      * @param page 必填参数，需要的查询的页数，默认值 1
      * @param limit 可选参数，分页大小，默认值 5
@@ -119,7 +119,7 @@ public class FollowUpController {
     /**
      * 
      * 描述：添加跟踪记录
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/7/12
      * @version 1.0
      * @param followUp 要添加的跟踪记录数据
@@ -169,7 +169,7 @@ public class FollowUpController {
  
     /**
      * 描述：更新跟踪记录
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/7/12
      * @version 1.0
      * @param followUp 要更新的数据
@@ -212,7 +212,7 @@ public class FollowUpController {
     
     /**
      * 描述：删除跟踪记录
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/7/12
      * @version 1.0
      * @param ids 要删除的id数组

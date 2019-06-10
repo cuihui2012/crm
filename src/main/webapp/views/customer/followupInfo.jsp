@@ -50,7 +50,7 @@ layui.use(['upload'],function(){
 	
 	$.post('${pageContext.request.contextPath}/followup/find',{'id':parm.id},function(data){
 		var follow = data.data;
-		var title = '' + follow.time[0] + '-' + follow.time[1] + '-' + follow.time[2] + '   ' + follow.time[3] + ':' +follow.time[4] + ':' +follow.time[5];
+		var title = '' + follow.time[0] + '-' + follow.time[1] + '-' + follow.time[2] + '   ' + ((follow.time[3] == undefined || follow.time[3] == 0)?'00':follow.time[3]+'') + ':' +((follow.time[4] == undefined || follow.time[4] == 0)?'00':follow.time[4]+'') + ':' +((follow.time[5] == undefined || follow.time[5] == 0)?'00':follow.time[5]+'');;
 		var str = '';
 		str += '<tr><td>客户名称：</td><td>' + follow.customer.name + '</td></tr>';
 		str += '<tr><td>跟进时间：</td><td>' + title +  '</td></tr>';

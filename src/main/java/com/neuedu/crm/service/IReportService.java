@@ -41,7 +41,7 @@ public interface IReportService {
 	
 	/**
 	 * 描述：描述：统计这一年的新增客户
-	 * @author HuangWanzong
+	 * @author cuihui
 	 * @date 2018/07/24
 	 * @version 1.0
 	 * @param year 格式 2018
@@ -54,7 +54,7 @@ public interface IReportService {
 	
 	/**
 	 * 描述：按照月份统计这一年的新增客户
-	 * @author HuangWanzong
+	 * @author cuihui
 	 * @date 2018/07/24
 	 * @version 1.0
 	 * @param year 格式 2018
@@ -67,7 +67,7 @@ public interface IReportService {
 	
 	/**
 	 * 描述：统计这个月每天的新增客户
-	 * @author HuangWanzong
+	 * @author cuihui
 	 * @date 2018/07/24
 	 * @version 1.0
 	 * @param yearMonth
@@ -80,7 +80,7 @@ public interface IReportService {
 	
 	/**
 	 * 描述：统计这一年的跟踪记录
-	 * @author HuangWanzong
+	 * @author cuihui
 	 * @date 2018/07/24
 	 * @version 1.0
 	 * @param year 格式 2018-12 2018-02
@@ -94,7 +94,7 @@ public interface IReportService {
     /**
      * 
      * 描述：按照月份统计这一年的跟踪记录
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/07/24
      * @version 1.0
      * @param year 格式 2018
@@ -109,7 +109,7 @@ public interface IReportService {
     /**
      * 
      * 描述：统计这个月每天的跟踪记录
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/07/24
      * @version 1.0
      * @param yearMonth 格式 2018-12 2018-02
@@ -123,7 +123,7 @@ public interface IReportService {
     
     /**
      * 描述：按照某个分类统计这一年的新增客户
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/07/24
      * @version 1.0
      * @param category 必须从Report中读取以 CATEGORY开头的静态变量
@@ -137,7 +137,7 @@ public interface IReportService {
 
     /**
      * 描述：按照某个分类统计这一月的新增客户
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/07/24
      * @version 1.0
      * @param category 必须从Report中读取以 CATEGORY开头的静态变量
@@ -152,7 +152,7 @@ public interface IReportService {
     /**
      * 
      * 描述：按照某个分类统计这一天的新增客户
-     * @author HuangWanzong
+     * @author cuihui
      * @date 2018/07/24
      * @version 1.0
      * @param category 必须从Report中读取以 CATEGORY开头的静态变量

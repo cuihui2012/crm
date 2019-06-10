@@ -10,7 +10,7 @@ import com.neuedu.crm.pojo.ServerInfo;
 public interface IServerInfoService {
     /**
      * 描述：获取系统的基本信息
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @return 
      * @exception Nothing
@@ -21,7 +21,7 @@ public interface IServerInfoService {
     
     /**
      * 描述：获取cpu信息
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @return 
      * @exception Nothing
@@ -32,7 +32,7 @@ public interface IServerInfoService {
     
     /**
      * 描述：获取内存信息
-     * @author huangwanzong
+     * @author cuihui
      * @version 1.0
      * @return 
      * @exception Nothing

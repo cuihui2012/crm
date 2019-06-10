@@ -16,7 +16,7 @@ import com.neuedu.crm.service.IDictionaryTypeService;
 
 /**
  * 
- * @author huangwanzong
+ * @author cuihui
  *
  */
 
