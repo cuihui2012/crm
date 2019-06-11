@@ -1,6 +1,7 @@
 package com.neuedu.crm.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.neuedu.crm.pojo.FollowUp;
 import com.neuedu.crm.pojo.FollowUpExample;
@@ -86,7 +87,7 @@ public interface IFollowUpService {
 	 * @since 1.8
 	 *
 	 */
-	public List<FollowUp> selectByFollowUpExample(FollowUpExample followUpExample);
+	public Map<String,List<FollowUp>> selectByFollowUpExample(FollowUpExample followUpExample);
 	
 	/**
 	 * 

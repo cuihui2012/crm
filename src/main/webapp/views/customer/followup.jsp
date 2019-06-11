@@ -5,14 +5,28 @@
 
 <script src="js/myutil.js"></script>
 
-<div style="width: 96%;margin-left: 2%;">
+<div style="width: 96%;margin-left: 2%; margin-top: 12px">
         <!-- 跟踪记录 -->
-        <shiro:hasPermission name="6002">
+        <%--<shiro:hasPermission name="6002">
 	        <div>
 	                <button class="layui-btn" id="add-follow">新建跟踪记录</button>
 	                <!-- <button class="layui-btn" id="delete-follow">删除</button> -->
 	        </div>
-        </shiro:hasPermission>
+        </shiro:hasPermission>--%>
+        <div class="layui-form" style="width:100%;margin-top: 20px;">
+            <blockquote class="layui-elem-quote quoteBox">
+                <label style="margin-left: 20px;" class="layui-label">客户：</label>
+
+                <div style="width: 120px;" class="layui-inline" lay-filter="customerId">
+                    <select id="customerId" name="customerId" style="width:100%;" lay-verify="required">
+                        <option value="">请选择</option>
+                    </select>
+                </div>
+
+                <button style="margin-left: 20px;" id="searchBtn" class="layui-btn"
+                        type="button" lay-filter="userForm">搜索</button>
+            </blockquote>
+        </div>
         <div id="show-followup">
             <ul class="layui-timeline" id="follow-flow">
             </ul>          
@@ -23,9 +37,10 @@
 layui.use(['table','flow'],function(){
 	var flow = layui.flow;
 	var layer = layui.layer;
+	var form = layui.form;
 	var table = layui.table;
 	var $ = layui.$;
-
+    showCustomer();
 
 	//使用流加载跟踪记录
 	flow.load({
@@ -36,17 +51,21 @@ layui.use(['table','flow'],function(){
 	     $.post('${pageContext.request.contextPath}/followup/list',{'page':page}, function(res){
 	       //假设你的列表返回在data集合中
 	       layui.each(res.data, function(index, item){
-	    	 var title = '' + item.time[0] + '年' + item.time[1] + '月' + item.time[2] + '日' + '   ' + ((item.time[3] == undefined || item.time[3] == 0)?'00':item.time[3]+'') + ':' +((item.time[4] == undefined || item.time[4] == 0)?'00':item.time[4]+'') + ':' +((item.time[5] == undefined || item.time[5] == 0)?'00':item.time[5]+'');
-	         //var title = Format(item.time,'yyyy-MM-dd HH:mm:ss');
 	    	 var str = '<li class="layui-timeline-item"><i class="layui-icon layui-timeline-axis">&#xe63f;</i>';
 	         str += '<div class="layui-timeline-content layui-text" >';
-	         str += '<h3 class="layui-timeline-title"> <a id="manager-' + item.manager.id + '" style="font-size: 16px;">' + item.manager.account + '</a> ';
-	         str += '<a href="javascript:" style="font-size: 18px;color:black;" id="followup-' + item.id + '">' + title + '</a></h3><p>';
-	         str += '跟踪对象：<a href="javascript:" style="color:black;" id="customerInfo-' + item.customer.id + '">' + item.customer.name + '</a><br/>';
-	         str += '概要信息：' + item.general + '</p></div></li>';
-	    	 lis.push(str);
-	       }); 
-	       
+	         str += '<h3 class="layui-timeline-title"><a href="javascript:" style="color:black;" id="customerInfo-' + item[0].customer.id + '">' + index + '</a>(共计'+ item.length +'条) </h3><p>';
+
+               layui.each(item, function(index1, item1){
+                   var gzTime = '' + item1.time[0] + '年' + item1.time[1] + '月' + item1.time[2] + '日' + '   ' + ((item1.time[3] == undefined || item1.time[3] == 0)?'00':item1.time[3]+'') + ':' +((item1.time[4] == undefined || item1.time[4] == 0)?'00':item1.time[4]+'') + ':' +((item1.time[5] == undefined || item1.time[5] == 0)?'00':item1.time[5]+'');
+                   str += '跟踪日期：<a href="javascript:" style="font-size: 16px;" id="followup-' + item1.id + '">' + gzTime + '</a><br/>';
+                   str += '跟踪人：<a id="manager-' + item1.manager.id + '" style="font-size: 16px;">' + item1.manager.account + '</a><br/>';
+                   str += '概要信息：' + item1.general + '<br/>';
+                   str += '<br/>';
+               });
+               str += '</p></div></li>';
+               lis.push(str);
+	       });
+
 	       //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
 	       //pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
 	       next(lis.join(''), page < res.pages);    
@@ -134,6 +153,42 @@ layui.use(['table','flow'],function(){
 		}
 		return str;
 	}
-	
+
+
+    //展示角色菜单
+    function showCustomer(){
+        debugger;
+        var load = null;
+        $.ajax({
+            type : "POST",
+            async: false,
+            url : "${pageContext.request.contextPath}/customer/list",
+            dataType : "json",
+
+            //请求前执行，无论请求是否成功
+            beforeSend : function() {
+                //显示加载动画
+                load = layer.load(2);
+            },
+            complete : function() {
+                //关闭加载动画
+                layer.close(load);
+            },
+            success : function(data) {
+                var html = '';
+                if (data.data.length > 0) {
+                    debugger;
+                    $("#customerId").html("");
+                    var customers = data.list;
+                    html += "<option value=''></option>";
+                    for(var i = 0 ; i < customers.length ; i++ ){
+                        html += "<option value='"+customers[i].id+"'>"+customers[i].name+"</option>";
+                    }
+                    $("#customerId").html(html);
+                }
+                form.render('select');
+            }
+        });
+    };
 });
 </script>

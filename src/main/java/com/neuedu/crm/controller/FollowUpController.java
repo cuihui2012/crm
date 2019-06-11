@@ -70,7 +70,8 @@ public class FollowUpController {
             page = 1;
         }
         if(limit == null || limit <= 0) {
-            limit = 5;
+            //由于分组显示,此处显示全部
+            limit = 999999999;
         }
         
         //如果不是查询全部数据，就设置分页属性
@@ -103,9 +104,9 @@ public class FollowUpController {
         }
         
         Long count = followupService.countByFollowUpExample(example);
-        List<FollowUp> list = followupService.selectByFollowUpExample(example);
+        Map<String,List<FollowUp>> groupMap = followupService.selectByFollowUpExample(example);
         
-        map.put("data", list);
+        map.put("data", groupMap);
         map.put("count", count);
         map.put("code", 0);
         
@@ -173,7 +174,6 @@ public class FollowUpController {
      * @date 2018/7/12
      * @version 1.0
      * @param followUp 要更新的数据
-     * @param request
      * @return Map<String,Object>
      * @since 1.8
      *

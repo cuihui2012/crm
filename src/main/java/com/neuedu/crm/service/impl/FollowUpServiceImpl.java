@@ -1,6 +1,9 @@
 package com.neuedu.crm.service.impl;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -56,17 +59,26 @@ public class FollowUpServiceImpl implements IFollowUpService {
 	}
 
 	@Override
-	public List<FollowUp> selectByFollowUpExample(FollowUpExample followUpExample) {
+	public Map<String,List<FollowUp>> selectByFollowUpExample(FollowUpExample followUpExample) {
 	    List<FollowUp> list = followUpMapper.selectByExample(followUpExample);
+		Map<String,List<FollowUp>> map = new HashMap<String,List<FollowUp>>();
 	    for(FollowUp followUp : list) {
 	        if(followUp.getCustomerId() != null) {
                 followUp.setCustomer(customerMapper.selectByPrimaryKey(followUp.getCustomerId()));
             }
             if(followUp.getManagerId() != null) {
                 followUp.setManager(userService.findById(followUp.getManagerId()));
-            } 
+            }
+            //对跟进记录进行分组
+			if(map.containsKey(followUp.getCustomer().getName())){
+				map.get(followUp.getCustomer().getName()).add(followUp);
+			} else {
+				List<FollowUp> groupList = new ArrayList<FollowUp>();
+				groupList.add(followUp);
+				map.put(followUp.getCustomer().getName(),groupList);
+			}
 	    }
-		return list;
+		return map;
 	}
 
 	@Override
