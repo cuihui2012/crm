@@ -97,6 +97,8 @@ public class FollowUpController {
             
             List<Customer> customers = customerService.selectByCustomerExample(customerExample);
             List<Integer> ids = new ArrayList<Integer>();
+            //没有客户时，防止sql报错
+            ids.add(-1);
             for(Customer customer : customers) {
                 ids.add(customer.getId());
             }

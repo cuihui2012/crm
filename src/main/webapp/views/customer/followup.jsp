@@ -13,20 +13,6 @@
 	                <!-- <button class="layui-btn" id="delete-follow">删除</button> -->
 	        </div>
         </shiro:hasPermission>--%>
-        <div class="layui-form" style="width:100%;margin-top: 20px;">
-            <blockquote class="layui-elem-quote quoteBox">
-                <label style="margin-left: 20px;" class="layui-label">客户：</label>
-
-                <div style="width: 120px;" class="layui-inline" lay-filter="customerId">
-                    <select id="customerId" name="customerId" style="width:100%;" lay-verify="required">
-                        <option value="">请选择</option>
-                    </select>
-                </div>
-
-                <button style="margin-left: 20px;" id="searchBtn" class="layui-btn"
-                        type="button" lay-filter="userForm">搜索</button>
-            </blockquote>
-        </div>
         <div id="show-followup">
             <ul class="layui-timeline" id="follow-flow">
             </ul>          
@@ -40,7 +26,6 @@ layui.use(['table','flow'],function(){
 	var form = layui.form;
 	var table = layui.table;
 	var $ = layui.$;
-    showCustomer();
 
 	//使用流加载跟踪记录
 	flow.load({
@@ -153,42 +138,5 @@ layui.use(['table','flow'],function(){
 		}
 		return str;
 	}
-
-
-    //展示角色菜单
-    function showCustomer(){
-        debugger;
-        var load = null;
-        $.ajax({
-            type : "POST",
-            async: false,
-            url : "${pageContext.request.contextPath}/customer/list",
-            dataType : "json",
-
-            //请求前执行，无论请求是否成功
-            beforeSend : function() {
-                //显示加载动画
-                load = layer.load(2);
-            },
-            complete : function() {
-                //关闭加载动画
-                layer.close(load);
-            },
-            success : function(data) {
-                var html = '';
-                if (data.data.length > 0) {
-                    debugger;
-                    $("#customerId").html("");
-                    var customers = data.list;
-                    html += "<option value=''></option>";
-                    for(var i = 0 ; i < customers.length ; i++ ){
-                        html += "<option value='"+customers[i].id+"'>"+customers[i].name+"</option>";
-                    }
-                    $("#customerId").html(html);
-                }
-                form.render('select');
-            }
-        });
-    };
 });
 </script>
