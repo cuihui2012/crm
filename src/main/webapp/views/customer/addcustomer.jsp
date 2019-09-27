@@ -62,15 +62,15 @@
             </a>
         </div>
         
-        <!-- 客户类别 --> 
-        <label class="layui-form-label">客户类别：</label>
+        <!-- 客户归属 -->
+        <label class="layui-form-label">客户归属：</label>
         <div class="layui-input-inline">
 	      <select name="type">
 	           <option value="">--数据加载中--</option>
 	      </select>
 	    </div>
         <div class="layui-form-mid layui-word-aux">
-            <a href="#" name="客户类别" id="field-type"  style="color: blue;">
+            <a href="#" name="客户归属" id="field-type"  style="color: blue;">
                 <i class="layui-icon  layui-icon-add-1"></i>编辑
             </a>
         </div>	    	
@@ -89,36 +89,36 @@
                 <i class="layui-icon  layui-icon-add-1"></i>编辑
             </a>
         </div>          
-        <!-- 客户等级 --> 
-        <label class="layui-form-label">客户等级：</label>
+        <!-- 客户性质 -->
+        <label class="layui-form-label">客户性质：</label>
         <div class="layui-input-inline">
 	      <select name="customerLevel">
 	        <option value="">--数据加载中--</option>
 	      </select>
 	    </div>	
         <div class="layui-form-mid layui-word-aux">
-            <a href="#" name="客户等级" id="field-customerLevel"  style="color: blue;">
+            <a href="#" name="客户性质" id="field-customerLevel"  style="color: blue;">
                 <i class="layui-icon  layui-icon-add-1"></i>编辑
             </a>
         </div>  	    
     </div>	
 	
     <div class="layui-form-item">
-       <!-- 客户信用度-->  
-       <label class="layui-form-label">客户信用度：</label>
+       <!-- 客户信用等级-->
+       <label class="layui-form-label">客户信用等级：</label>
        <div class="layui-input-inline" style="width: 135px;">
             <select name="credit">
 	            <option value="">--数据加载中--</option>
             </select>
         </div>
          <div class="layui-form-mid layui-word-aux">
-            <a href="#" name="客户信用度" id="field-credit"  style="color: blue;">
+            <a href="#" name="客户信用等级" id="field-credit"  style="color: blue;">
                 <i class="layui-icon  layui-icon-add-1"></i>编辑
             </a>
         </div> 
         
                
-        <!-- 客户成熟度 --> 
+        <!-- 客户成熟度 -->
         <label class="layui-form-label">客户成熟度：</label>
         <div class="layui-input-inline">
           <select name="maturity">
@@ -366,17 +366,17 @@ layui.use(['form','upload','laydate'],function(){
 	//获取客户状态字典并加载下拉框
 	getSelectData('客户状态','status');
 	
-    //获取客户类别字典并加载下拉框
-    getSelectData('客户类别','type');
+    //获取客户归属字典并加载下拉框
+    getSelectData('客户归属','type');
     
     //获取客户来源字典并加载下拉框
 	getSelectData('客户来源','source');
     
-	//获取客户等级字典并加载下拉框
-    getSelectData('客户等级','customerLevel');
+	//获取客户性质字典并加载下拉框
+    getSelectData('客户性质','customerLevel');
 	
-    //获取客户信用度字典并加载下拉框
-    getSelectData('客户信用度','credit');
+    //获取客户信用等级字典并加载下拉框
+    getSelectData('客户信用等级','credit');
     
     //获取客户成熟度字典并加载下拉框
     getSelectData('客户成熟度','maturity');

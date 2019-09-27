@@ -148,7 +148,7 @@ public class CustomerController {
      * @param linkman 联系人信息
      * @param customerName 客户名称
      * @param linkmanName 联系人名称
-     * @param customerLevel 客户等级
+     * @param customerLevel 客户性质
      * @param request
      * @return Map<String,Object>
      * @since 1.8
@@ -192,7 +192,7 @@ public class CustomerController {
         customer.setCreateTime(LocalDateTime.now());
         //设置客户名称
         customer.setName(customerName);
-        //设置客户等级
+        //设置客户性质
         customer.setLevel(customerLevel);
         //设置未删除
         customer.setDeleteStatus(0);

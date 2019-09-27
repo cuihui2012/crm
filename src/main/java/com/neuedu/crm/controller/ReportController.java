@@ -119,11 +119,11 @@ public class ReportController {
 				break;
 			case 2010:
 				list = reportService.countCustomerByCategoryWithYear(Report.CATEGORY_CREDIT, date, user.getId());
-				dictName = "客户信用度";
+				dictName = "客户信用等级";
 				break;
 			case 2020:
 				list = reportService.countCustomerByCategoryWithYear(Report.CATEGORY_LEVEL, date, user.getId());
-				dictName = "客户等级";
+				dictName = "客户性质";
 				break;
 			case 2030:
 				list = reportService.countCustomerByCategoryWithYear(Report.CATEGORY_MATURITY, date, user.getId());
@@ -139,7 +139,7 @@ public class ReportController {
 				break;
 			case 2060:
 				list = reportService.countCustomerByCategoryWithYear(Report.CATEGORY_TYPE, date, user.getId());
-				dictName = "客户类别";
+				dictName = "客户归属";
 				break;
 			default:
 				map.put("msg", "非法操作");
@@ -170,11 +170,11 @@ public class ReportController {
 				break;
 			case 2010:
 				list = reportService.countCustomerByCategoryWithMonth(Report.CATEGORY_CREDIT, date, user.getId());
-				dictName = "客户信用度";
+				dictName = "客户信用等级";
 				break;
 			case 2020:
 				list = reportService.countCustomerByCategoryWithMonth(Report.CATEGORY_LEVEL, date, user.getId());
-				dictName = "客户等级";
+				dictName = "客户性质";
 				break;
 			case 2030:
 				list = reportService.countCustomerByCategoryWithMonth(Report.CATEGORY_MATURITY, date, user.getId());
@@ -190,7 +190,7 @@ public class ReportController {
 				break;
 			case 2060:
 				list = reportService.countCustomerByCategoryWithMonth(Report.CATEGORY_TYPE, date, user.getId());
-				dictName = "客户类别";
+				dictName = "客户归属";
 				break;
 			default:
 				map.put("msg", "非法操作");
@@ -218,11 +218,11 @@ public class ReportController {
 				break;
 			case 2010:
 				list = reportService.countCustomerByCategoryWithDay(Report.CATEGORY_CREDIT, date, user.getId());
-				dictName = "客户信用度";
+				dictName = "客户信用等级";
 				break;
 			case 2020:
 				list = reportService.countCustomerByCategoryWithDay(Report.CATEGORY_LEVEL, date, user.getId());
-				dictName = "客户等级";
+				dictName = "客户性质";
 				break;
 			case 2030:
 				list = reportService.countCustomerByCategoryWithDay(Report.CATEGORY_MATURITY, date, user.getId());
@@ -238,7 +238,7 @@ public class ReportController {
 				break;
 			case 2060:
 				list = reportService.countCustomerByCategoryWithDay(Report.CATEGORY_TYPE, date, user.getId());
-				dictName = "客户类别";
+				dictName = "客户归属";
 				break;
 			default:
 				map.put("msg", "非法操作");

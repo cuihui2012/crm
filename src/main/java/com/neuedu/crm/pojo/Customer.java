@@ -19,12 +19,12 @@ public class Customer implements Serializable {
     private String name;
 
     /**
-     * 客户类别（数据字典）
+     * 客户归属（数据字典）
      */
     private String type;
 
     /**
-     * 客户等级（数据字典）
+     * 客户性质（数据字典）
      */
     private String level;
 
@@ -34,7 +34,7 @@ public class Customer implements Serializable {
     private String status;
 
     /**
-     * 客户信用度（数据字典）
+     * 客户信用等级（数据字典）
      */
     private String credit;
 

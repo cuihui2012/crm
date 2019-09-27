@@ -49,10 +49,10 @@ DROP TABLE IF EXISTS `customer`;
 CREATE TABLE `customer` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '客户编号',
   `name` varchar(255) DEFAULT NULL COMMENT '客户名称（唯一性）',
-  `type` varchar(255) DEFAULT NULL COMMENT '客户类别（数据字典）',
-  `level` varchar(255) DEFAULT NULL COMMENT '客户等级（数据字典）',
+  `type` varchar(255) DEFAULT NULL COMMENT '客户归属（数据字典）',
+  `level` varchar(255) DEFAULT NULL COMMENT '客户性质（数据字典）',
   `status` varchar(255) DEFAULT NULL COMMENT '客户状态（数据字典）',
-  `credit` varchar(255) DEFAULT NULL COMMENT '客户信用度（数据字典）',
+  `credit` varchar(255) DEFAULT NULL COMMENT '客户信用等级（数据字典）',
   `area` varchar(255) DEFAULT NULL COMMENT '客户所在地区',
   `company_address` varchar(255) DEFAULT NULL COMMENT '公司详细地址',
   `company_phone` varchar(255) DEFAULT NULL COMMENT '公司电话',
@@ -235,7 +235,7 @@ CREATE TABLE `dictionary_type` (
 
 LOCK TABLES `dictionary_type` WRITE;
 /*!40000 ALTER TABLE `dictionary_type` DISABLE KEYS */;
-INSERT INTO `dictionary_type` VALUES (83,'客户信用度'),(111,'客户关怀方式'),(82,'客户成熟度'),(76,'客户来源'),(80,'客户状态'),(81,'客户等级'),(75,'客户类别'),(79,'服务满意度'),(78,'服务状态'),(77,'服务类型'),(85,'服务紧急程度'),(88,'测试更新'),(87,'销售机会来源'),(84,'销售机会状态');
+INSERT INTO `dictionary_type` VALUES (83,'客户信用等级'),(111,'客户关怀方式'),(82,'客户成熟度'),(76,'客户来源'),(80,'客户状态'),(81,'客户性质'),(75,'客户归属'),(79,'服务满意度'),(78,'服务状态'),(77,'服务类型'),(85,'服务紧急程度'),(88,'测试更新'),(87,'销售机会来源'),(84,'销售机会状态');
 /*!40000 ALTER TABLE `dictionary_type` ENABLE KEYS */;
 UNLOCK TABLES;
 

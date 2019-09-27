@@ -14,7 +14,7 @@
   
   <form class="layui-form">
     <div class="layui-form-item">
-        <label class="layui-form-label">商品类别：</label>
+        <label class="layui-form-label">产品类别：</label>
         <div class="layui-input-block">
             <select name="categoryId" lay-filter="categoryId">
                 <option value="">--正在加载数据--</option>
@@ -22,10 +22,10 @@
         </div>
     </div>
     <div class="layui-form-item">
-        <label class="layui-form-label">商品类别：</label>
+        <label class="layui-form-label">产品名称：</label>
         <div class="layui-input-block">
             <select name="product" lay-filter="product">
-                <option value="">--请选择产品分类--</option>
+                <option value="">--正在加载数据--</option>
             </select>
         </div>
     </div>
@@ -60,7 +60,7 @@ layui.use(['form'],function(){
 	
 	form.on('select(categoryId)',function(data){
 		if(data.value == ''){
-			$('select[name=product]').html('<option value="">--请选择产品分类--</option>');
+			$('select[name=product]').html('<option value="">--请选择产品名称--</option>');
 			return;
 		}
 		

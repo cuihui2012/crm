@@ -111,9 +111,9 @@ layui.use(['table','form'], function(){
         	  return str = '<a style="color:blue;" href="javascript:" lay-event="detail">' +data.name + '</a>';
           }}
           ,{field:'status',title:'客户状态'}
-          ,{field:'type',title:'客户类别'}
+          ,{field:'type',title:'客户归属'}
           ,{field:'maturity',title:'客户成熟度'}
-          ,{field:'level',title:'客户等级'}
+          ,{field:'level',title:'客户性质'}
           ,{field:'description',title:'客户描述'}
         
       ]],
@@ -348,7 +348,7 @@ layui.use(['table','form'], function(){
     	    sheetData:data,
     	    sheetName:'sheet',
     	    sheetFilter:['name','type','level','status','credit','area','companyAddress','companyPhone','postCode','faxAddress','companyWebsite','licenseNumber','corporation','annualSale','depositBank','bankAccount','landTaxNumber','nationalTaxNumber','source','description','maturity'],
-    	    sheetHeader:['名称' ,'类别' ,'等级'  ,'状态'   ,'信用度' ,'area' ,'详细地址'       ,'电话'          ,'邮政编码'  ,'传真地址'    ,'公司网站'        ,'营业执照注册号'  ,'法人'        ,'年营业额'    ,'开户银行'     ,'银行账号'     ,'地税登记号'      ,'国税登记号'         ,'来源'   ,'描述'        ,'成熟度']
+    	    sheetHeader:['名称' ,'客户归属' ,'客户性质'  ,'状态'   ,'信用度' ,'地区' ,'详细地址'       ,'电话'          ,'邮政编码'  ,'传真地址'    ,'公司网站'        ,'营业执照注册号'  ,'法人'        ,'年营业额'    ,'开户银行'     ,'银行账号'     ,'地税登记号'      ,'国税登记号'         ,'来源'   ,'描述'        ,'成熟度']
     	  }
     	 
     	];

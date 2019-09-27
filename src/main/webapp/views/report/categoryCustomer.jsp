@@ -18,12 +18,12 @@
 		               <label class="layui-form-label">分类</label>
 			            <div class="layui-input-inline" style="width:150px;">
 			                <select name="selectType" lay-filter="report-object">
-			                    <option value="2010" selected>客户信用度</option>
-			                    <option value="2020" >客户等级</option>
+			                    <option value="2010" selected>客户信用等级</option>
+			                    <option value="2020" >客户性质</option>
 			                    <option value="2030" >客户成熟度</option>
 			                    <option value="2040" >客户来源</option>
 			                    <option value="2050" >客户状态</option>
-			                    <option value="2060" >客户类别</option>
+			                    <option value="2060" >客户归属</option>
 			                </select>
 			            </div>
 			        </div>

@@ -233,6 +233,9 @@ public class UserServiceImpl implements IUserService {
             return null;
         }
     }
-   
 
+    public static void main(String[] args) {
+        String encodedPassword = Md5Util.encrypt("123456", "zhangqz7230b359061a476e6317170f6a9a05b9");
+        System.out.println(encodedPassword);
+    }
 }

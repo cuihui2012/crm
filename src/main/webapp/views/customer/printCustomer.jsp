@@ -61,17 +61,17 @@
                     <tr>
                       <td>客户状态：</td>
                       <td id="status"></td>
-                      <td>客户类别：</td>
+                      <td>客户归属：</td>
                       <td id="type"></td>
                     </tr>
                     <tr>
                       <td>客户来源：</td>
                       <td id="source"></td>
-                      <td>客户等级：</td>
+                      <td>客户性质：</td>
                       <td id="level"></td>
                     </tr>
                     <tr>
-                      <td>客户信用度：</td>
+                      <td>客户信用等级：</td>
                       <td id="credit"></td>
                       <td>客户成熟度：</td>
                       <td id="maturity"></td>
